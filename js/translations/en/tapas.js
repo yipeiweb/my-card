@@ -1,0 +1,28 @@
+export default {
+    title: 'Tapas',
+    content: {
+        'Alitas de pollos fritas': 4.5,
+        'Croquetas de pollo/jamón': 4,
+        'Pinchos de carne': 3.5,
+        'Callos': 6,
+        'Albóndigas con salsa': 5,
+        'Costillas fritas con sal y pimienta': 5.5,
+        'Costillas con salsa de tomate': 4.5,
+        'Jamón serrano': 6,
+        'Jamón y queso': 6,
+        'Queso': 6,
+        'Chipirones fritos': 6.8,
+        'Pescaditos fritos': 4.5,
+        'Mejillones al vapor': 4,
+        'Calamares a la romana': 7.2,
+        'Pulpo a la gallega': 8,
+        'Pulpo con salsa de tomate': 8,
+        'Gambas saldas': 6.8,
+        'Gambas a la plancha': 6.8,
+        'Langostinos rebozados': 6.8,
+        'Boquerones al vinagre': 3,
+        'Patatas bravas': 3.5,
+        'Gambas al ajillo': 8.8,
+        'Sardina': 5,
+    }
+}
