@@ -1,5 +1,5 @@
 export default {
-    title: 'Bar Sabadell',
+    title: 'My card',
     categories: {
         title: 'Categories',
         types: {
