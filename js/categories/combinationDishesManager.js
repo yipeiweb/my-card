@@ -1,8 +1,8 @@
-import EnData from "../translations/en/tapas.js";
-import EsData from "../translations/es/tapas.js";
+import EnData from "../translations/en/combinationDishes.js";
+import EsData from "../translations/es/combinationDishes.js";
 import CONST from "../constant.js";
 
-export default class TapasManager {
+export default class CombinationDishesManager {
     constructor(languageManager)
     {
         this.languageManager = languageManager;
@@ -31,20 +31,20 @@ export default class TapasManager {
     {
         let data = null;
 
-        let tapasTitle = document.querySelector('[data-id="tapas-title"]');
-        if (tapasTitle) {
+        let combinationPlateTitle = document.querySelector('[data-id="combination-plate-title"]');
+        if (combinationPlateTitle) {
             data = this.getData();
-            tapasTitle.innerHTML = data.title;
+            combinationPlateTitle.innerHTML = data.title;
         }
 
-        let tapasContainer = document.querySelector('[data-action="add-tapas-content"]');        
-        if (tapasContainer) {
+        let combinationPlatescontainer = document.querySelector('[data-action="add-combination-plates-content"]');        
+        if (combinationPlatescontainer) {
             for (const key in data.content) {
-                tapasContainer.innerHTML +=`
+                combinationPlatescontainer.innerHTML +=`
                     <div class="card diy-card mb-4">
                         <div class="card-body">
                             <a class="${data.content[key].image == '' ? 'd-none' : ''} text-dark mr-2" 
-                            href="${data.content[key].image}"><i class="fa fa-eye"></i></a>
+                               href="${data.content[key].image}"><i class="fa fa-eye"></i></a>
                             <span>${key}</span>
                             <strong class="float-right">${data.content[key].price}€</strong>
                         </div>

@@ -4,9 +4,9 @@ import EsPrivacity from "./translations/es/privacity.js";
 import HomeManager from "./homeManager.js";
 import SandwichManager from "./categories/sandwichManager.js";
 import MenuManager from "./categories/menuManager.js";
-import CombinationPlateManager from "./categories/combinationPlateManager.js";
+import CombinationDishesManager from "./categories/combinationDishesManager.js";
 import TapasManager from "./categories/tapasManager.js";
-import SpecialPlateManager from "./categories/specialPlateManager.js";
+import SpecialDishesManager from "./categories/specialDishesManager.js";
 
 export default class RouterManager
 {
@@ -15,9 +15,9 @@ export default class RouterManager
         this.homeManager = new HomeManager(languageManager);
         this.sandwichManager = new SandwichManager(languageManager);
         this.menuManager = new MenuManager(languageManager);
-        this.combinationPlateManager = new CombinationPlateManager(languageManager);
+        this.combinationDishesManager = new CombinationDishesManager(languageManager);
         this.tapasManager = new TapasManager(languageManager);
-        this.specialPlateManager = new SpecialPlateManager(languageManager);
+        this.specialDishesManager = new SpecialDishesManager(languageManager);
         
         this.languageManager = languageManager;
         this.languageTag = this.languageManager.getLanguage();
@@ -118,9 +118,9 @@ export default class RouterManager
             
             self.sandwichManager.eventDelegation();
             self.menuManager.eventDelegation();
-            self.combinationPlateManager.eventDelegation();
+            self.combinationDishesManager.eventDelegation();
             self.tapasManager.eventDelegation();
-            self.specialPlateManager.eventDelegation();
+            self.specialDishesManager.eventDelegation();
 
             self.popState();
          })

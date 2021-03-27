@@ -3,10 +3,10 @@ export default {
         title: 'Categorias',
         types: {
             'menu': 'Menu',
-            'combinationPlate': 'Platos combinados',
+            'combinationDishes': 'Platos combinados',
             'tapas': 'Tapas',
             'sandwich': 'Bocadillos',
-            'specialPlate': 'Platos especiales'            
+            'specialDishes': 'Platos especiales'            
         }
     }
 }

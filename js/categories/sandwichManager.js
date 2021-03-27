@@ -31,8 +31,14 @@ export default class SandwichManager {
     {
         let data = this.getData();
 
+        let exampleImage = `
+            <a href="${data.categories.image}" class="text-center">
+                <i class="fa fa-eye text-dark"></i>
+            </a>
+        `;
+
         let sandwichTitle = document.querySelector('[data-id="sandwich-title"]');
-        sandwichTitle ? sandwichTitle.innerHTML = data.categories.title : null;
+        sandwichTitle ? sandwichTitle.innerHTML = data.categories.title + ' ' + exampleImage : null;
         
         let hotSandwichTitle = document.querySelector('[data-id="hot-sandwich-title"]');
         hotSandwichTitle ? hotSandwichTitle.innerHTML = data.categories.types.titles.hot : null;

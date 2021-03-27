@@ -1,36 +1,37 @@
 export default {
     categories: {
         title: 'Sandwiches',
+        image: 'https://drive.google.com/uc?id=1RKodfQXwIrpjrdZFMGtqBEbQZUrAZNCa',
         types: {
             titles: {
-                'hot': 'Bocadillos calientes',
-                'cold': 'Bocadillos frios',
+                'hot': 'Hot sandwiches',
+                'cold': 'Cold sandwiches',
             },
-            hot:  {
-                'Hamburguesa': '3.5',
+            hot: {
+                'Hamburger': '3.5',
                 'Frankfurt': '2.8',
-                'Lomo': '3',
-                'Chistorra':'3',
-                'Ternera':'3.5',
-                'Pollo':'3.5',
-                'Beicon':'3',
-                'Longaniza':'3.5',
-                'Tortilla francesa':'2.8',
-                'Tortilla jamón': '3.5',
-                'Tortilla patatas': '3.5',
-                'Calamares': '4',
+                'Loin': '3',
+                'Chistorra': '3',
+                'Veal': '3.5',
+                'Chicken': '3.5',
+                'Baicon': '3',
+                'Longaniza': '3.5',
+                'French omelette': '2.8',
+                'Ham omelette': '3.5',
+                'Potato omelette': '3.5',
+                'Fried calamari': '4',
                 'Bikini': '2.5',
-            } ,
+            },
             cold: {
                 'Fuet': '3',
-                'Jamón serrano': '3',
-                'Jamón dulce': '3',
+                'Serrano ham': '3',
+                'Sweet ham': '3',
                 'Chorizo': '2.8',
-                'Queso': '3',
-                'Atún': '2.8',
-                'Anchoa': '3',
-                'Vegetal': '3.5',
-            }           
+                'Cheese': '3',
+                'Tuna': '2.8',
+                'Anchovy': '3',
+                'Vegetable': '3.5',
+            }         
         }
     }
 }

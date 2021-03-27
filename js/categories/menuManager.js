@@ -59,11 +59,15 @@ export default class MenuManager {
 
         let firstPlatecontainer = document.querySelector('[data-action="add-first-plate-content"]');        
         if (firstPlatecontainer) {
-            data.firstPlate.content.forEach(plate => {
+            data.firstPlate.content.forEach((plate, index) => {
                 firstPlatecontainer.innerHTML +=`
                     <div class="card diy-card mb-4">
                         <div class="card-body">
                             <span>${plate}</span>
+                            <a class="${data.firstPlate.images[index] == '' ? 'd-none' : ''} float-right text-dark" 
+                                href="${data.firstPlate.images[index]}">
+                                <i class="fa fa-eye"></i>    
+                            </a>
                         </div>
                     </div>`;                
             });
@@ -71,11 +75,15 @@ export default class MenuManager {
         
         let secondPlatecontainer = document.querySelector('[data-action="add-second-plate-content"]');        
         if (secondPlatecontainer) {
-            data.secondPlate.content.forEach(plate => {
+            data.secondPlate.content.forEach((plate, index) => {
                 secondPlatecontainer.innerHTML +=`
                     <div class="card diy-card mb-4">
                         <div class="card-body">
                             <span>${plate}</span>
+                            <a class="${data.secondPlate.images[index] == '' ? 'd-none' : ''} float-right text-dark" 
+                              href="${data.secondPlate.images[index]}">
+                              <i class="fa fa-eye"></i>    
+                          </a>
                         </div>
                     </div>`;                
             });

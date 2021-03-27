@@ -1,6 +1,7 @@
 export default {
     categories: {
         title: 'Bocadillos',
+        image: 'https://drive.google.com/uc?id=1RKodfQXwIrpjrdZFMGtqBEbQZUrAZNCa',
         types: {
             titles: {
                 'hot': 'Bocadillos calientes',
@@ -18,7 +19,7 @@ export default {
                 'Tortilla francesa':'2.8',
                 'Tortilla jamón': '3.5',
                 'Tortilla patatas': '3.5',
-                'Calamares': '4',
+                'Calamares a la romana': '4',
                 'Bikini': '2.5',
             } ,
             cold: {

@@ -1,13 +1,13 @@
 export default {
-    title: 'My card',
+    title: 'Mi carta',
     categories: {
         title: 'Categorias',
         types: {
             'menu': 'Menu',
-            'combinationPlate': 'Platos combinados',
+            'combinationDishes': 'Platos combinados',
             'tapas': 'Tapas',
             'sandwich': 'Bocadillos',
-            'specialPlate': 'Platos especiales'            
+            'specialDishes': 'Platos especiales'            
         }
     },
     languages: {

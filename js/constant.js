@@ -4,10 +4,10 @@ export default {
     'homeLink': 'views/home/',
     'category': {
         'menu': 'menu',
-        'combinationPlate': 'combination-plate',
+        'combinationDishes': 'combination-dishes',
         'tapas': 'tapas',
         'sandwich': 'sandwich',
-        'specialPlate': 'special-plate'
+        'specialDishes': 'special-dishes'
     },
     'privacityHostName': 'privacity',
     'privacityLink': 'views/privacity',
