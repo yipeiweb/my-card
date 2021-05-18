@@ -1,0 +1,71 @@
+<div>
+    <h2 class="text-center m-2" v-if="menuData && menuData.title" >
+        {{ menuData.title[languageTag] }}
+    </h2>
+    
+    <div class="d-flex justify-content-center m-2">
+        <div>
+            <h4 class="text-center" v-if="menuData && menuData.price">
+                {{menuData.price}}€
+            </h4>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-center m-2">
+        <div class="font-weight-bold" v-if="menuData && menuData.conditions">
+            {{menuData.conditions[languageTag]}}
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white" 
+                    v-if="menuData && menuData.firstDishes && menuData.firstDishes.title">
+                    <b>{{menuData.firstDishes.title[languageTag]}}</b>
+                </div>
+            </div>
+    
+            <div    v-if="menuData && menuData.firstDishes && menuData.firstDishes.content && menuData.firstDishes.images"
+                    v-for="(item, index) in menuData.firstDishes.content[languageTag]" :key="index">
+                <ul class="list-group mt-2 mb-2">
+                    <li class="list-group-item list-group-item-primary">
+                        <a  v-if="menuData.firstDishes.images[index] != ''"
+                            class="text-dark text-decoration-none mr-2" 
+                           :href="menuData.firstDishes.images[index]">
+                            <i class="fa fa-eye"></i> 
+                        </a>
+                        {{ item }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white" 
+                    v-if="menuData && menuData.secondDishes && menuData.secondDishes.title">
+                    <b>{{menuData.secondDishes.title[languageTag]}}</b>
+                </div>
+            </div>
+    
+            <div    v-if="menuData && menuData.secondDishes && menuData.secondDishes.content && menuData.secondDishes.images"
+                    v-for="(item, index) in menuData.secondDishes.content[languageTag]" :key="index">
+                <ul class="list-group mt-2 mb-2">
+                    <li class="list-group-item list-group-item-primary">
+                        <a class="text-dark text-decoration-none mr-2" 
+                           :href="menuData.secondDishes.images[index]">
+                            <i class="fa fa-eye"></i> 
+                        </a>
+                        {{ item }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+</div>

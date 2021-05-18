@@ -1,0 +1,27 @@
+.diy-link:hover a {
+    text-decoration: none;
+}
+
+.diy-link-text {
+    color: #007bff !important;
+}
+
+.diy-link:hover .diy-link-text, .diy-link-text:hover {
+    color: white !important;
+}
+
+.diy-privacity-banner {
+    border: 2px solid lightgray;
+    position: fixed;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 9999;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b8daff;
+}

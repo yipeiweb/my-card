@@ -1,0 +1,9 @@
+<div class="privacity-container diy-privacity-banner p-2" v-if="!isAcceptPrivacity">
+    <p class="diy-link">
+        <span v-if="data && data.message">{{ data.message[languageTag] }}</span>
+        <router-link :to="{name:'privacity'}" v-if="data && data.readmore">{{ data.readmore[languageTag] }}</router-link>
+    </p>
+    <span class="d-inline-block m-auto" @click="acceptPrivacity()">
+        <a class="btn btn-success" v-if="data && data.accept">{{ data.accept[languageTag] }}</a>
+    </span>
+</div>

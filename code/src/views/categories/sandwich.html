@@ -1,0 +1,52 @@
+<div>
+    <h2 class="text-center m-2" v-if="sandwichData && sandwichData.title" >
+        {{ sandwichData.title[languageTag] }}
+        <a  v-if="sandwichData && sandwichData.image != ''"
+        class="text-dark text-decoration-none ml-2" 
+       :href="sandwichData.image">
+        <i class="fa fa-eye"></i> 
+        </a>
+    </h2>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white" 
+                    v-if="sandwichData && sandwichData.types && sandwichData.types.titles && sandwichData.types.titles.hot">
+                    <b>{{sandwichData.types.titles.hot[languageTag]}}</b>
+                </div>
+            </div>
+    
+            <div    v-if="sandwichData && sandwichData.types && sandwichData.types.hot"
+                    v-for="(item, index) in sandwichData.types.hot" :key="index">
+                <ul class="list-group mt-2 mb-2">
+                    <li class="list-group-item list-group-item-primary">
+                        {{ item[languageTag] }}
+                        <b class="float-right">{{ item.price }}€</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white" 
+                    v-if="sandwichData && sandwichData.types && sandwichData.types.titles && sandwichData.types.titles.cold">
+                    <b>{{sandwichData.types.titles.cold[languageTag]}}</b>
+                </div>
+            </div>
+    
+            <div    v-if="sandwichData && sandwichData.types && sandwichData.types.cold"
+                    v-for="(item, index) in sandwichData.types.cold" :key="index">
+                <ul class="list-group mt-2 mb-2">
+                    <li class="list-group-item list-group-item-primary">
+                        {{ item[languageTag] }}
+                        <b class="float-right">{{ item.price }}€</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+</div>

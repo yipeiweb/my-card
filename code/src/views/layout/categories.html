@@ -1,0 +1,39 @@
+<div>
+    <h1 class="text-center mb-4" v-if="data && data.title">{{ data.title[languageTag] }}</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="search-wrapper panel-heading col-md-12">
+            </div> 
+
+            <div class="input-group mb-3 col-md-12">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-primary text-white">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </span>
+                </div>
+                <input class="form-control" type="text" v-model="searchQuery" :placeholder="searchPlaceholder" />
+              </div>
+
+            <div class="col-md-12 mt-4" 
+                 v-if="data && data.content"
+                 v-for="(item, index) in resultQuery" :key="index">
+                 <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        <a class="text-dark text-decoration-none mr-2"
+                           v-if="item.image != ''"
+                           :href="item.image">
+                             <i class="fa fa-eye"></i> 
+                        </a>
+                        {{ item[languageTag] }}
+                        <b class="float-right">{{item.price}}€</b>
+                        <p v-if="item.description && item.description[languageTag]"
+                           class="text-muted">
+                          {{ item.description[languageTag] }}
+                        </p>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+</div>
